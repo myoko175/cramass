@@ -1,0 +1,18 @@
+<div class="contents row">
+  <p><%= @company %>様の登録機械一覧</p>
+
+  <% @machines.each do |machine| %>
+    <div class="machine" 
+      <div class="category">
+        <%= link_to machine.category, category_path(machine.id) %>
+      </div>
+      <div class="model">
+        <%= link_to machine.model %>
+      <div class="made">
+        <%= link_to machine.made %>
+      </div>
+      <div class="engineer">
+        <%= link_to machine.engenner %>
+      </div>
+    </div>
+  <% end %>

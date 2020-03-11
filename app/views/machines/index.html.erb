@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="machines.scss">
+    <title>Craftsman's Master Stroke</title>
+  </head>  
+  <body>
+    <header>
+      <div class="heading">
+        <h1 class="title">□ 機械一覧 □</h1>
+      </div>
+    </header>
+    <div class="contents">
+      <% @machines.each do |post| %>
+        <table>
+          <tr>
+            <th>カテゴリ</th>
+            <th>型式</th>
+            <th>メーカー</th>
+            <th>導入日</th>
+            <th>オーナー</th>
+            <th>住所</th>
+            <th>詳細を見る</th>
+          </tr>
+          <tr>
+            <td>旋盤</td>
+            <td>aaa</td>
+            <td>日立製作所</td>
+            <td>2020-12-10</td>
+            <td>ABC株式会社</td>
+            <td>東京等〇〇区</td>
+            <td>詳細</td>
+          </tr>
+        </table>
+      <% end %>
+    </div>
+    <footer>
+    </footer>
+  </body>
+</html>

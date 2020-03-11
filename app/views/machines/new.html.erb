@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="new.scss">
+    <title>Craftsman's Master Stroke</title>
+  </head>  
+
+  <body>
+    <header>
+      <div class ="heading">
+        <div>機械登録</div>
+      </div>
+    </header>
+    <div class ="contents">
+      <div class="contents-row">
+        <div class="container">
+          <%= form_with(model: @machine, local: true) do |form| %>
+            機械カテゴリ：<br>
+            <%= form.text_area :category, placeholder: "機械カテゴリ" , rows: "2" %><br>
+            機械型式：<br>
+            <%= form.text_area :model, placeholder: "型式" , rows: "2" %><br>
+            製造日：<br>
+            <%= form.text_area :made, placeholder: "機械製造日" , rows: "2" %><br>
+            エンジニア：<br>
+            <%= form.radio_button(:engineer, "あり") %>
+            <%= form.label(:engineer, "あり", value: "あり")  %>
+            <%= form.radio_button(:engineer, "なし") %>
+            <%= form.label(:engenner, "なし", value: "なし") %><br>
+            <%= form.text_field :image, placeholder: "写真を貼ってください" %><br>
+            <%= form.submit "SEND" %>
+          <% end %>
+            <%# <a href= post-end_machines_path, class="cta-btn">登録する</a> %>
+            <%# <a href= "/machines/post-end", class="cta-btn">登録する</a> %>
+        
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
