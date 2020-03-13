@@ -1,18 +1,37 @@
-<div class="contents row">
-  <p><%= @company %>様の登録機械一覧</p>
-
-  <% @machines.each do |machine| %>
-    <div class="machine" 
-      <div class="category">
-        <%= link_to machine.category, category_path(machine.id) %>
-      </div>
-      <div class="model">
-        <%= link_to machine.model %>
-      <div class="made">
-        <%= link_to machine.made %>
-      </div>
-      <div class="engineer">
-        <%= link_to machine.engenner %>
+<body>
+  <header>
+    <div class="index-heading">
+      <h1 class="title">▫︎機械一覧▫︎</h1>
+      <div class= "emblem">
+        <div class= "main-title">
+          CraMasS
+        </div>
+        <div class= "stands-for">
+          Craftsman's Master Stroke
+        </div>
       </div>
     </div>
-  <% end %>
+  </header>
+  <main>
+    <div class="user-top">
+      <p><%= @company %>様 登録機械一覧</p>
+      <% @machines.each do |machine| %>
+        <div class="machine">
+          <span class="category">
+            <%= link_to machine.category %>
+          </span>
+          <span class="model">
+            <%= link_to machine.model %>
+          </span>
+          <span class="made">
+            <%= link_to machine.made %>
+          </span>
+          <span class="engineer">
+            <%= link_to machine.engineer %>
+          </span>
+        </div>
+      <% end %>
+    </div>
+  </main>
+  <div class="index-footer"></div>
+</body>
