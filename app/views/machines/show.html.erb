@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="new.scss">
+    <title>Craftsman's Master Stroke</title>
+  </head>
+
+  <body>
+    <div class="show-main">
+      <div class="s-headding">
+        <div class="s-box">
+          <h1 class="s-category">▫︎機械一覧▫︎</h1>
+          <h1 class="s-model">▫︎機械一覧▫︎</h1>
+        </div>
+        <div class= "s-emblem">
+          <div class= "s-main-title">
+            CraMasS
+          </div>
+          <div class= "s-stands-for">
+            Craftsman's Master Stroke
+          </div>
+        </div>
+      </div>
+      <div class="s-contents">
+          <div class="s-info">
+            <ul class="s-list">
+              <li>
+                <span class="s-maker">
+                <a href="/machines/<%= @machine.id %>">
+              </li>
+              <li>
+                <span class="s-made">
+                <a href="/machines/<%= @machine.made %>">
+              </li>
+              <li>
+                <span class="s-engineer">
+                <a href="/machines/<%= @machine.engineer %>">
+              </li>
+              <li>
+                <span class="s-company">
+                <a href="/users/<%= @user.company %>">
+              </li>
+              <li>
+                <span class="s-address">
+                <a href="/users/<%= @user.address %>">
+              </li>
+              <li>
+                <span class="s-email">
+                <a href="/users/<%= @user.email %>">
+              </li>
+            </ul>
+          </div>
+          <div clas="s-image">
+            <a href="/machines/<%= @machine.image %>">
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

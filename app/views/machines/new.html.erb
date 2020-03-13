@@ -1,26 +1,27 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="new.scss">
-    <title>Craftsman's Master Stroke</title>
-  </head>  
+
+  <div class="index-heading">
+    <h1 class="title">▫︎機械登録▫︎</h1>
+    <div class= "emblem">
+      <div class= "main-title">
+        CraMasS
+      </div>
+      <div class= "stands-for">
+        Craftsman's Master Stroke
+      </div>
+    </div>
+  </div>
 
   <body>
-    <header>
-      <div class ="heading">
-        <div>機械登録</div>
-      </div>
-    </header>
-    <div class ="contents">
+    <%# <div class ="contents"> %>
       <div class="contents-row">
         <div class="container">
           <%= form_with(model: @machine, local: true) do |form| %>
             機械カテゴリ：<br>
-            <%= form.text_area :category, placeholder: "機械カテゴリ" , rows: "2" %><br>
+            <%= form.text_area :category, placeholder: "" , rows: "2" %><br>
             機械型式：<br>
-            <%= form.text_area :model, placeholder: "型式" , rows: "2" %><br>
+            <%= form.text_area :model, placeholder: "" , rows: "2" %><br>
             製造日：<br>
-            <%= form.text_area :made, placeholder: "機械製造日" , rows: "2" %><br>
+            <%= form.text_area :made, placeholder: "" , rows: "2" %><br>
             エンジニア：<br>
             <%= form.radio_button(:engineer, "あり") %>
             <%= form.label(:engineer, "あり", value: "あり")  %>
@@ -34,6 +35,5 @@
         
         </div>
       </div>
-    </div>
+    <%# </div> %>
   </body>
-</html>

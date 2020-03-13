@@ -8,21 +8,32 @@
   <body>
     <header>
       <div class="heading">
-        <div class="title">CraMasS</div>
-        <div class="detail">〜クラフトマンズ ・ マスターストローク〜</div>
+        <div class="box">
+          <div class="title">CraMasS</div>
+          <div class="detail">〜クラフツマンズ ・ マスターストローク〜</div>
+        </div>
+      </div>
+      <div class="username">
+        <% if user_signed_in? %>
+        <span><%= current_user.company %>  
+        <% end %>
+      </div>             
     </header>
-    <div class="contents">   
+    <div class="main">
       <div class="box">
         <% if user_signed_in? %>
           <div class="cta-btn">
-            <%= link_to "マイページ", "/users/#{current_user.id}" %>
-          </div>
-          <div class="cta-btn">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <%= link_to "マイページへいく", "/users/#{current_user.id}" %>
           </div>
           <div class="cta-btn">
             <%= link_to  "機械を登録する", "/machines/new" %>
           </div>
+          <div class="cta-btn">
+          <%= link_to "機械一覧", "/machines" %>
+          </div>
+          <div class="cta-btn">
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+          </div>        
         <% else %>
           <div class="cta-btn">
             <%= link_to "ログイン", new_user_session_path %>
@@ -30,11 +41,13 @@
           <div class="cta-btn">
             <%= link_to "アカウント登録", new_user_registration_path %>
           </div>
+          <div class="cta-btn">
+            <%= link_to "機械一覧", "/machines" %>
+          </div>
         <% end %>
       </div>
     </div>
     <footer>
     </footer>
-  </body>
-  
+  </body> 
 </html>

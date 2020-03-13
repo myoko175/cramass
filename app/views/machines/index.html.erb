@@ -1,40 +1,56 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="machines.scss">
+    <link rel="stylesheet" href="new.scss">
     <title>Craftsman's Master Stroke</title>
-  </head>  
+  </head>
+
   <body>
-    <header>
-      <div class="heading">
-        <h1 class="title">□ 機械一覧 □</h1>
+    <div class="index-main">
+      <div class="index-headding">
+        <h1 class="title">▫︎機械一覧▫︎</h1>
+        <div class= "emblem">
+          <div class= "main-title">
+            CraMasS
+          </div>
+          <div class= "stands-for">
+            Craftsman's Master Stroke
+          </div>
+        </div>
       </div>
-    </header>
-    <div class="contents">
-      <% @machines.each do |post| %>
-        <table>
-          <tr>
-            <th>カテゴリ</th>
-            <th>型式</th>
-            <th>メーカー</th>
-            <th>導入日</th>
-            <th>オーナー</th>
-            <th>住所</th>
-            <th>詳細を見る</th>
-          </tr>
-          <tr>
-            <td>旋盤</td>
-            <td>aaa</td>
-            <td>日立製作所</td>
-            <td>2020-12-10</td>
-            <td>ABC株式会社</td>
-            <td>東京等〇〇区</td>
-            <td>詳細</td>
-          </tr>
-        </table>
-      <% end %>
+      <div class="main-contents">
+        <div class="index-contents">
+            <table>
+              <tr>
+                <th>カテゴリ</th>
+                <th>型式</th>
+                <th>メーカー</th>
+                <th>導入日</th>
+                <th>オーナー</th>
+                <th>住所</th>
+                <th>詳細を見る</th><br>
+              </tr>
+          <% @machines.each do |machine| %>
+          <% @users.each do |user| %>
+              <tr>
+                <td><%= machine.category %></td>
+                <td><%= machine.model %></td>
+                <td><%= machine.maker %></td>
+                <td><%= machine.made %></td>
+                <td><%= user.company %></td>
+                  <a href="/users/<%= machine.user.id %>">
+                    <span><%= machine.user.company %></span>
+                  </a>
+                <td><%= user.address %></td>
+                <%= link_to '詳細', "/machines/#{machine.id}", method: :get %>
+              </tr>
+            </table>
+          <% end %>
+          <% end %>
+        </div>
+      </div>
+      <div class="index-footer">
+      </div>
     </div>
-    <footer>
-    </footer>
   </body>
 </html>

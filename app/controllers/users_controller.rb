@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
   def show
-    user = User.find(params[:id])
-    @company = current_user.company
+    @company= current_user.company
     @machines = current_user.machines
   end
+  #   user = User.find(params[:id])
+  #   @company = user.company
+  #   @machines = user.machines
+  # end
 end
