@@ -15,7 +15,7 @@
       <%= form.label(:engineer, "あり", value: "あり")  %>
       <%= form.radio_button(:engineer, "なし") %>
       <%= form.label(:engenner, "なし", value: "なし") %><br>
-      <%= form.text_field :image, placeholder: "写真を貼ってください" %><br>
+       <%= form.file_field :image %>
       <%= form.submit "SEND" %>
     <% end %>
   </div>
