@@ -3,7 +3,7 @@ class MachinesController < ApplicationController
   
   def index
     @machines = Machine.includes(:user)
-    @users = User.all
+    # @users = User.all
   end
 
   def new
@@ -30,12 +30,12 @@ class MachinesController < ApplicationController
 
   def show
     @machine = Machine.find(params[:id])
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
   end
 
   private
   def machine_params
-    params.require(:machine).permit(:category, :model, :made, :engineer, :image).merge(user_id: current_user.id)
+    params.require(:machine).permit(:category, :model, :address, :made, :maker, :engineer, :image).merge(user_id: current_user.id)
   end
 
   def move_to_index

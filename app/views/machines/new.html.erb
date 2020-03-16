@@ -17,11 +17,15 @@
         <div class="container">
           <%= form_with(model: @machine, local: true) do |form| %>
             機械カテゴリ：<br>
-            <%= form.text_area :category, placeholder: "" , rows: "2" %><br>
+            <%= form.text_area :category, placeholder: "" , rows: "1" %><br>
             機械型式：<br>
-            <%= form.text_area :model, placeholder: "" , rows: "2" %><br>
+            <%= form.text_area :model, placeholder: "" , rows: "1" %><br>
+            メーカー：<br>
+            <%= form.text_area :maker, placeholder: "" , rows: "1" %><br>
             製造日：<br>
-            <%= form.text_area :made, placeholder: "" , rows: "2" %><br>
+            <%= form.text_area :made, placeholder: "" , rows: "1" %><br>
+            所在：<br>
+            <%= form.text_area :address, placeholder: "" , rows: "1" %><br>
             エンジニア：<br>
             <%= form.radio_button(:engineer, "あり") %>
             <%= form.label(:engineer, "あり", value: "あり")  %>

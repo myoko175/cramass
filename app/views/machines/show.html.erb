@@ -9,8 +9,7 @@
     <div class="show-main">
       <div class="s-headding">
         <div class="s-box">
-          <h1 class="s-category">▫︎機械一覧▫︎</h1>
-          <h1 class="s-model">▫︎機械一覧▫︎</h1>
+          <h1 class="title">▫︎製品詳細▫︎</h1>
         </div>
         <div class= "s-emblem">
           <div class= "s-main-title">
@@ -25,34 +24,43 @@
           <div class="s-info">
             <ul class="s-list">
               <li>
-                <span class="s-maker">
-                <a href="/machines/<%= @machine.id %>">
+                カテゴリー：<br>
+                <%= @machine.category %>
               </li>
               <li>
-                <span class="s-made">
-                <a href="/machines/<%= @machine.made %>">
+                型式：<br>
+                <%= @machine.model %>
               </li>
               <li>
-                <span class="s-engineer">
-                <a href="/machines/<%= @machine.engineer %>">
+                メーカー：<br>
+                <%= @machine.maker %>
               </li>
               <li>
-                <span class="s-company">
-                <a href="/users/<%= @user.company %>">
+                導入日：<br>
+                <%= @machine.made %>
               </li>
               <li>
-                <span class="s-address">
-                <a href="/users/<%= @user.address %>">
+                エンジニア：<br>
+                <%= @machine.engineer %>
               </li>
               <li>
-                <span class="s-email">
-                <a href="/users/<%= @user.email %>">
+                所在地：<br>
+                <%= @machine.address %>
               </li>
             </ul>
+            <div class="cta-btn">
+              <a href="/users/<%= @machine.user.id %>">
+                <%= @machine.user.company %>
+              </a>
+            </div>
           </div>
-          <div clas="s-image">
-            <a href="/machines/<%= @machine.image %>">
+          <div class="s-image">
+            イメージ
+            <img src= <%= @machine.image %>>
           </div>
+        <div>   
+      </div>
+      <div class="s-footer">
       </div>
     </div>
   </body>

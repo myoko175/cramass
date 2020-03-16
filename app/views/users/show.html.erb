@@ -1,7 +1,7 @@
 <body>
-  <header>
-    <div class="index-heading">
-      <h1 class="title">▫︎機械一覧▫︎</h1>
+  <div class="u-main">
+    <div class="u-headding">
+      <h1 class="owner">▫︎オーナー情報▫︎</h1>
       <div class= "emblem">
         <div class= "main-title">
           CraMasS
@@ -11,27 +11,49 @@
         </div>
       </div>
     </div>
-  </header>
-  <main>
-    <div class="user-top">
-      <p><%= @company %>様 登録機械一覧</p>
-      <% @machines.each do |machine| %>
-        <div class="machine">
-          <span class="category">
-            <%= link_to machine.category %>
-          </span>
-          <span class="model">
-            <%= link_to machine.model %>
-          </span>
-          <span class="made">
-            <%= link_to machine.made %>
-          </span>
-          <span class="engineer">
-            <%= link_to machine.engineer %>
-          </span>
+    <div class="u-contents">
+      <div class="u-info">
+        <div class="u-left">
+          <div class="u-company">         
+            <div><%= @company %></div>
+          </div>
+          <div class="u-url">
+            URL: <span><%= link_to @url, @url %></span>
+          </div>
         </div>
-      <% end %>
+        <div class="u-email">
+          オファーする：<br>
+          <span><%= @email %></span>
+        </div>
+      </div>
+      <div class="u-post"> 
+        <% @machines.each do |machine| %>
+          <div class="machine">
+            <table border="5" width="1000" cellpadding="10">
+              <tr bgcolor="#0059b3">
+                <th width="16%"><font color="white">カテゴリ</font></th>
+                <th width="13%"><font color="white">型式</font></th>
+                <th width="10%"><font color="white">メーカー</font></th>
+                <th width="13%"><font color="white">導入日</font></th>
+                <th width="40%"><font color="white">住所</font></th>
+              </tr>
+              <tr><td><%= machine.category %></td>
+              <td><%= machine.model %></td>
+              <td><%= machine.maker %></td>
+              <td align="center"><%= machine.made %> </td>
+              <td><%= machine.address %></td>
+              <td><span class="btn"><%= link_to '詳細', "/machines/#{machine.id}", method: :get %></span></td>
+              <% if user_signed_in? && current_user.id == machine.user_id %>
+                <td><span class="btn"><%= link_to "編集", "/machines/#{machine.id}/edit", method: :get %></span></td>
+                <td><span class="btn"><%= link_to '削除', "/machines/#{machine.id}", method: :delete %></span></td>
+              </tr>
+              <% end %>
+            </table>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </main>
-  <div class="index-footer"></div>
+    <div class="u-footer">
+    </div>
+  </div>
 </body>
