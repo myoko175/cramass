@@ -1,10 +1,3 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheets" href="home.scss">
-    <title>Craftsman's Master Stroke</title>
-  </head>  
-
   <body>
     <header>
       <div class="heading">
@@ -15,39 +8,51 @@
       </div>
       <div class="username">
         <% if user_signed_in? %>
-        <span><%= current_user.company %>  
+        <span><%= current_user.company %> 様
         <% end %>
-      </div>             
+      </div>
     </header>
     <div class="main">
-      <div class="box">
-        <% if user_signed_in? %>
-          <div class="cta-btn">
-            <%= link_to "マイページへいく", "/users/#{current_user.id}" %>
-          </div>
-          <div class="cta-btn">
-            <%= link_to  "機械を登録する", "/machines/new" %>
-          </div>
-          <div class="cta-btn">
-          <%= link_to "機械一覧", "/machines" %>
-          </div>
-          <div class="cta-btn">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-          </div>        
-        <% else %>
-          <div class="cta-btn">
-            <%= link_to "ログイン", new_user_session_path %>
-          </div>
-          <div class="cta-btn">
-            <%= link_to "アカウント登録", new_user_registration_path %>
-          </div>
-          <div class="cta-btn">
+      <div class="main-area">
+        <div class="main-box">
+          <% if user_signed_in? %>
+            <div class="cta-btn">
+              <%= link_to "マイページへいく", "/users/#{current_user.id}" %>
+            </div>
+            <div class="cta-btn">
+              <%= link_to  "機械を登録する", "/machines/new" %>
+            </div>
+            <div class="cta-btn">
             <%= link_to "機械一覧", "/machines" %>
-          </div>
-        <% end %>
+            </div>
+            <div class="cta-btn">
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </div>        
+          <% else %>
+            <div class="cta-btn">
+              <%= link_to "ログイン", new_user_session_path %>
+            </div>
+            <div class="cta-btn">
+              <%= link_to "アカウント登録", new_user_registration_path %>
+            </div>
+            <div class="cta-btn">
+              <%= link_to "機械一覧", "/machines" %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
     <footer>
+    <div class="footer">
+      <div class="banner">
+        <span class="banner-app">
+          <%= link_to image_tag('http://furima.tokyo/assets/app-store-9c5e28e8f81bd9912e0ded2f78821e04778a1356c05dc7c7bf1e88614be37c34.svg', :width =>'300'), 'https://www.apple.com/jp/ios/app-store/' %>
+        </span>
+        <span class="banner-google">
+          <%= link_to image_tag('http://furima.tokyo/assets/google-play-469c63f1269e456307c4dde176b33cc3bbbbf142ac4d7369656010130149db1a.svg', :width =>'300'), 'https://play.google.com/store?hl=ja' %>
+        </span>
+      </div>
+    </div>
     </footer>
   </body> 
 </html>

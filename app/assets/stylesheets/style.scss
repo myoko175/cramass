@@ -15,7 +15,7 @@
 
 // @import url(http://fonts.googleapis.com/css?family=Unica+One);
 
-$accent: #57C3E9;
+$accent: pink;
 $black: #292929;
 $dark: #666;
 $darkGray: #999999;
@@ -38,7 +38,7 @@ $white: white;
 }
 
 body,html {
-  height: 100%;
+  height: 130vh;
   background-color: $lightGray;
 }
 
@@ -89,7 +89,7 @@ a {
 .btn {
     @include basePadding(8px 20px);
     font-size: 14px;
-    border: 2px solid $accent;
+    border: 2px solid pink;
     color: $accent;
     font-weight: bold;
     text-align: center;
@@ -345,7 +345,7 @@ form {
     @extend .transition;
     background-color: $accent;
     border-radius: 20px;
-    color: #fff;
+    color: gray;
     border: 0;
     font-size: 18px;
     &:hover {
@@ -379,14 +379,17 @@ footer {
 }
 
 .search-form {
+  width: 100%;
   text-align: center;
   padding-top: 32px;
   .search-input {
-    width: 30%;
+    width: 60%;
     margin-right: 10px;
   }
 
   .search-btn {
-    width: 10%;
+    background-color: goldenrod;
+    color: gray;
+    width: 15%;
   }
 }

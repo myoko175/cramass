@@ -1,0 +1,28 @@
+           <table border="5" width="1300">
+              <tr bgcolor="#0059b3" align="center">
+                <th width="15%"><font color="white">カテゴリ</font></th>
+                <th width="9%"><font color="white">型式</font></th>
+                <th width="10%"><font color="white">メーカー</font></th>
+                <th width="9%" ><font color="white">導入日</font></th>
+                <th width="30%"><font color="white">住所</font></th>
+                <th width="20%"><font color="white">オーナー</font></th>
+                <th width="7%"><font color="white"></font></th>
+              </tr>
+              <tr bgcolor="lemonchiffon"><td><%= machine.category %></td>
+              <td><%= machine.model %></td>
+              <td><%= machine.maker %></td>
+              <td align="center"><%= machine.made %></td>
+              <td><a href="住所"> <%= machine.address %></a></td>
+              <td align="center"><a href="オーナー">
+                <span class="compnay">
+                  <a href="/users/<%= machine.user.id %>">
+                    <%= machine.user.company %>
+                  </a>
+              </td>
+              <td align="center"><span class="btn"><%= link_to '詳細', "/machines/#{machine.id}", method: :get %></td>
+              <%# <% if user_signed_in? && current_user.id == machine.user_id %>
+                <%# <td><span class="btn"><%= link_to "編集", "/machines/#{machine.id}/edit", method: :get %>
+                <%# <td><span class="btn"><%= link_to '削除', "/machines/#{machine.id}", method: :delete %>
+              <%# <%end%>
+              </tr>
+            </table>
