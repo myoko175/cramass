@@ -48,14 +48,14 @@
                 <%= @machine.address %>
               </li>
             </ul>
-            <div class="cta-btn">
+            <div class="b-btn">
               <a href="/users/<%= @machine.user.id %>">
                 <%= @machine.user.company %>
               </a>
             </div>
           </div>
           <div class="s-image">
-            <img src= <%= @machine.image %>>
+            <%= image_tag(@machine.image.url, :size => "400x400") %>
           </div>
         <div>   
       </div>

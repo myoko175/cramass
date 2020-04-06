@@ -1,5 +1,5 @@
 class MachinesController < ApplicationController
-  before_action :move_to_index, except: [:index, :show]
+  before_action :move_to_index, except: [:index, :show, :search]
   
   def index
     @machines = Machine.includes(:user)
@@ -31,6 +31,10 @@ class MachinesController < ApplicationController
   def show
     @machine = Machine.find(params[:id])
     # @user = User.find(params[:id])
+  end
+
+  def search
+    @machines = Machine.search(params[:keyword])
   end
 
   private

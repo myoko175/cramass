@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2020_03_14_052613) do
     t.string "maker"
     t.date "made"
     t.string "engineer"
-    t.text "image"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"

@@ -6,7 +6,7 @@ class CreateMachines < ActiveRecord::Migration[5.2]
       t.string :maker
       t.date :made
       t.string :engineer
-      t.text :image
+      t.string :image
       t.timestamps
     end
   end

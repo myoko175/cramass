@@ -1,3 +1,23 @@
+<header>
+  <div class="heading">
+    <div class="box">
+      <%= link_to root_path do %>
+        <div class="title">CraMasS</div>
+        <div class="detail">〜クラフツマンズ ・ マスターストローク〜</div>
+      <%end%>
+    </div>
+  </div>
+  <div class="username">
+    <% if user_signed_in? %>
+    <span><%= current_user.company %> 様
+    <% end %>
+  </div>
+</header>
+
+
+
+
+
 <div class="set-row">
   <div class="container">
 

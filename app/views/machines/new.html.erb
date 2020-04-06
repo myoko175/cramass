@@ -28,9 +28,11 @@
             <%= form.text_area :address, placeholder: "" , rows: "1" %><br>
             エンジニア：<br>
             <%= form.radio_button(:engineer, "あり") %>
-            <%= form.label(:engineer, "あり", value: "あり")  %>
-            <%= form.radio_button(:engineer, "なし") %>
-            <%= form.label(:engenner, "なし", value: "なし") %><br>
+            <%= form.label(:engineer, "あり", {value: "あり", style: "display: inline-block;"}) %>
+            <span>
+              <%= form.radio_button(:engineer, "なし") %>
+              <%= form.label(:engenner, "なし", {value: "なし",style: "display: inline-block;"}) %><br>
+            </span>
             <%= form.file_field :image %>
             <%= form.submit "SEND" %>
           <% end %>
