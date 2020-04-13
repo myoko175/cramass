@@ -8,7 +8,7 @@
   ### 工作機械を所有している企業が、工作機械を使って開発したい借り手に対し、オペレーターごと貸し出せるようなマッチングアプリです。
 
 ## 開発背景
-  ### 加工機械を所有する企業は、景気の変動などで仕事量が少なくなり、機械とそのオペレーターが遊んでしまうことが悩ましいです。一方、何か新しい物を製作・開発したい人は、機械を買ったりオペレーターをを育てたりする投資が必要で、試作への障壁が高い状況です。そういった中、貸し手と借り手がWIN-WINの関係になるサービスがあればと思い、アプリを開発しました。
+  ### 工作機械を所有する企業は、景気の変動などで仕事量が少なくなり、機械とそのオペレーターが遊んでしまうことが悩ましいです。一方、何か新しい物を製作・開発したい人は、機械を買ったりオペレーターを育てたりする投資が必要で、試作への障壁が高い状況です。そういった中、貸し手と借り手がWIN-WINの関係になるサービスがあればと思い、アプリを開発しました。
 
 ## トップ画像
 
@@ -21,3 +21,32 @@
 ## 開発環境
   ### ruby '2.5.1'
   ### VSCode (Visual Studio Code)
+
+## DB設計
+
+ ### usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|company|string|null: false|
+|address|string|null: false|
+|tell|string|null: false|
+|url|string||
+|email|string|null: false|
+|password|string|null: false|
+#### Association
+- has_many :machines
+
+### machinesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|category|string|null: false|
+|model|string|null: false|
+|maker|string||
+|made|date||
+|engineer|string||
+|image|text||
+|address|string|null: false|
+#### Association
+- belongs_to :user
