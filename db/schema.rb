@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 2020_03_14_052613) do
   end
 
   create_table "machines", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "category"
-    t.string "model"
+    t.string "category", null: false
+    t.string "model", null: false
     t.string "maker"
     t.date "made"
     t.string "engineer"
@@ -35,9 +35,9 @@ ActiveRecord::Schema.define(version: 2020_03_14_052613) do
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "company"
-    t.string "address"
-    t.string "tell"
+    t.string "company", null: false
+    t.string "address", null: false
+    t.string "tell", null: false
     t.string "url"
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
