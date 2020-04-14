@@ -8,7 +8,8 @@
   ### https://warm-wave-74212.herokuapp.com/
 
 ## ログインアカウント
-  ### Eメール: alpha@alpha  パスワード: aaaaaa
+  ### Eメール: alpha@alpha
+  ### パスワード: aaaaaa
 
 ## 概要
   ### 工作機械を所有している企業が、工作機械を使って開発したい借り手に対し、オペレーターごと貸し出せるようなマッチングアプリです。アプリ名は、Craftsman's Master stroke （職人の神技） の略です。
