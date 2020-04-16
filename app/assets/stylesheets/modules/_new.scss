@@ -47,11 +47,29 @@
     width: 100%;
     bottom: 0;
     position: fixed;
+    .cta-btn{
+      width: 200px;
+      padding: 10px 0;
+      border: ridge 2px pink;
+      text-align: center;
+      vertical-align: center;
+      font-size: 20px;
+      background-color: #414A52;
+      margin-top:15px;
+      margin-left: 1100px;
+      // margin-right: auto;
+      border-radius: 20px;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+
   }
 
 
 .show-main{
-  .s-headding{
+  .s-heading{
     background-color: #414A52;
     height: 100px;
     width:100%;
@@ -360,4 +378,47 @@
 
 .h1{
   color:goldenrod
+}
+
+.s-heading{
+  background-color: #414A52;
+  height: 100px;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  // position: fixed;
+  .title{
+    width: 400px;
+    font-size: 30px;
+    color: goldenrod;
+    line-height: 100px;
+    text-align: center;
+    padding-left: 50px;
+  }
+  
+  .s-emblem{
+    height: 70px;
+    width: 200px;    
+    .s-main-title{
+      width: 100%;
+      font-size: 25px;
+      color: white;
+      text-align: center;    
+    }
+    .s-stands-for{
+      font-size: 15px;
+      color: white;
+      margin: 0 auto;
+      text-align: center;    
+    }
+  }
+}
+
+.contents{
+  width: 90%;
+  margin: 0 auto;
+  .contents-row{
+    .container{}
+  }
 }

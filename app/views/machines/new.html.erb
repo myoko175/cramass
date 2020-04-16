@@ -1,45 +1,47 @@
 
-  <div class="index-heading">
-    <h1 class="title">▫︎機械登録▫︎</h1>
-    <div class= "emblem">
-      <div class= "main-title">
-        CraMasS
-      </div>
-      <div class= "stands-for">
-        Craftsman's Master Stroke
+
+
+<body>
+  <div class="s-heading">
+    <div class="s-box">
+      <h1 class="title">▫︎機械登録▫︎</h1>
+    </div>
+    <div class= "s-emblem">
+      <%= link_to root_path do %>
+        <div class= "s-main-title">
+          CraMasS
+        </div>
+        <div class= "s-stands-for">
+          Craftsman's Master Stroke
+        </div>
+      <%end%>
+    </div>
+  </div>  
+  <div class ="contents">
+    <div class="contents-row">
+      <div class="container">
+        <%= form_with(model: @machine, local: true) do |form| %>
+          機械カテゴリ：<br>
+          <%= form.text_area :category, placeholder: "" , rows: "1" %><br>
+          機械型式：<br>
+          <%= form.text_area :model, placeholder: "" , rows: "1" %><br>
+          メーカー：<br>
+          <%= form.text_area :maker, placeholder: "" , rows: "1" %><br>
+          製造日：<br>
+          <%= form.text_area :made, placeholder: "" , rows: "1" %><br>
+          所在：<br>
+          <%= form.text_area :address, placeholder: "" , rows: "1" %><br>
+          エンジニア：<br>
+          <%= form.radio_button(:engineer, "あり") %>
+          <%= form.label(:engineer, "あり", {value: "あり", style: "display: inline-block;"}) %>
+          <span>
+            <%= form.radio_button(:engineer, "なし") %>
+            <%= form.label(:engenner, "なし", {value: "なし",style: "display: inline-block;"}) %><br>
+          </span>
+          <%= form.file_field :image %>
+          <%= form.submit "SEND" %>
+        <% end %>
       </div>
     </div>
   </div>
-
-  <body>
-    <%# <div class ="contents"> %>
-      <div class="contents-row">
-        <div class="container">
-          <%= form_with(model: @machine, local: true) do |form| %>
-            機械カテゴリ：<br>
-            <%= form.text_area :category, placeholder: "" , rows: "1" %><br>
-            機械型式：<br>
-            <%= form.text_area :model, placeholder: "" , rows: "1" %><br>
-            メーカー：<br>
-            <%= form.text_area :maker, placeholder: "" , rows: "1" %><br>
-            製造日：<br>
-            <%= form.text_area :made, placeholder: "" , rows: "1" %><br>
-            所在：<br>
-            <%= form.text_area :address, placeholder: "" , rows: "1" %><br>
-            エンジニア：<br>
-            <%= form.radio_button(:engineer, "あり") %>
-            <%= form.label(:engineer, "あり", {value: "あり", style: "display: inline-block;"}) %>
-            <span>
-              <%= form.radio_button(:engineer, "なし") %>
-              <%= form.label(:engenner, "なし", {value: "なし",style: "display: inline-block;"}) %><br>
-            </span>
-            <%= form.file_field :image %>
-            <%= form.submit "SEND" %>
-          <% end %>
-            <%# <a href= post-end_machines_path, class="cta-btn">登録する</a> %>
-            <%# <a href= "/machines/post-end", class="cta-btn">登録する</a> %>
-        
-        </div>
-      </div>
-    <%# </div> %>
-  </body>
+</body>
