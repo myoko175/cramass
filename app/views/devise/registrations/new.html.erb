@@ -17,22 +17,22 @@
       <%= form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f| %>
         <%= devise_error_messages! %>
         <div class="field">
-          <%= f.label :会社名 %><br />
+          <%= f.label :会社名：　　 %><span>必須</span><br />
           <%= f.text_field :company %>
         </div>
 
         <div class="field">
-          <%= f.label :住所 %><br />
+          <%= f.label :住所：　　 %><span>必須</span><br />
           <%= f.text_field :address %>
         </div>
 
         <div class="field">
-          <%= f.label :Eメール %><br />
+          <%= f.label :Eメール：　　 %><span>必須</span><br />
           <%= f.email_field :email %>
         </div>
 
         <div class="field">
-          <%= f.label :電話番号 %><br />
+          <%= f.label :電話番号：　　 %><span>必須</span><br />
           <%= f.text_field :tell %>
         </div>
 
@@ -44,13 +44,13 @@
         <div class="field">
           <%= f.label :password %>
           <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
+          <em>(<%= @minimum_password_length %> characters minimum)：　　</em>
+          <% end %><span>必須</span><br />
           <%= f.password_field :password, autocomplete: "new-password" %>
         </div>
 
         <div class="field">
-          <%= f.label :password_confirmation %><br />
+          <%= f.label :password_confirmation：　　 %><span>必須</span><br />
           <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
         </div>
 
