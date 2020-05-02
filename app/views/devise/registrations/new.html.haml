@@ -1,0 +1,52 @@
+%body
+  %header
+    .heading
+      .box
+        = link_to root_path do
+          .title CraMasS
+          .detail 〜クラフツマンズ ・ マスターストローク〜
+  .set-row
+    .container
+      %p.container-title
+        アカウント登録
+      = form_with model: @user, url: user_registration_path, id: 'new_user', class: 'new_user', local: true do |f|
+        = devise_error_messages!
+        .field
+          = f.label :会社名：　　
+          %span 必須
+          %br/
+          = f.text_field :company
+        .field
+          = f.label :住所：　　
+          %span 必須
+          %br/
+          = f.text_field :address
+        .field
+          = f.label :Eメール：　　
+          %span 必須
+          %br/
+          = f.email_field :email
+        .field
+          = f.label :電話番号：　　
+          %span 必須
+          %br/
+          = f.text_field :tell
+        .field
+          = f.label :ホームページアドレス（任意）
+          %br/
+          = f.text_field :url
+        .field
+          = f.label :password
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length} characters minimum)：　　
+          %span 必須
+          %br/
+          = f.password_field :password, autocomplete: "new-password"
+        .field
+          = f.label :password_confirmation：　　
+          %span 必須
+          %br/
+          = f.password_field :password_confirmation, autocomplete: "new-password"
+        .actions
+          = f.submit "Sign up"

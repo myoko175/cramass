@@ -1,0 +1,31 @@
+%table{:border => "5", :width => "1300"}
+  %tr{:align => "center", :bgcolor => "#0059b3"}
+    %th{:width => "15%"}
+      %font{:color => "white"} カテゴリ
+    %th{:width => "9%"}
+      %font{:color => "white"} 型式
+    %th{:width => "10%"}
+      %font{:color => "white"} メーカー
+    %th{:width => "9%"}
+      %font{:color => "white"} 導入日
+    %th{:width => "30%"}
+      %font{:color => "white"} 住所
+    %th{:width => "20%"}
+      %font{:color => "white"} オーナー
+    %th{:width => "7%"}
+      %font{:color => "white"}
+  %tr{:bgcolor => "lemonchiffon"}
+    %td= machine.category
+    %td= machine.model
+    %td= machine.maker
+    %td{:align => "center"}= machine.made
+    %td
+      %a{:href => "住所"}
+        = machine.address
+    %td{:align => "center"}
+      %a{:href => "オーナー"}
+        %span.compnay
+          %a{:href => "/users/#{machine.user.id}"}
+            = machine.user.company
+    %td{:align => "center"}
+      %span.btn= link_to '詳細', "/machines/#{machine.id}", method: :get

@@ -74,3 +74,5 @@ end
 gem 'carrierwave'
 gem 'mini_magick'
 
+gem 'haml-rails'
+

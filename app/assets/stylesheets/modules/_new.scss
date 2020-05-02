@@ -1,9 +1,182 @@
-  .index-headding{
+/* home#top */
+.header{
+  width: 100%;
+  height: 190px;
+  top: 0;
+  position: fixed;
+  .heading{
+    background-color: #414A52;
+    height: 190px;
+    width:100%;
+    .box{
+      width: 30%;
+      height: 100%;
+      margin: 0 auto;
+      .title{
+        font-size: 40px;
+        line-height: 60px;
+        color: white;
+        text-align: center;
+        padding-top: 60px;
+      }
+      .detail{
+        font-size: 15px;
+        text-align: 20px;
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+  .username{
+    height: 40px;
+    color: goldenrod;
+    font-size: 25px; 
+    padding-left: 10%;
+    background-color: #414A52;
+    text-shadow: 1px 1px 1px gray;
+    border-bottom:solid 5px;
+  }
+}
+.main{
+  width: 100%;
+  height: calc(100vh - 450px);
+  background-color: pink;
+  top: 190px;
+  position: fixed;
+  .main-area{
+    height: 100%;
+    background-image: url(wheel.JPG);
+    background-size: cover;
+    width: 80%;
+    margin: 0 auto;
+    .main-box{
+      // background-color: yellow;
+      padding-top: 50px;
+      margin: auto;
+
+      .cta-btn {
+        // display: inline-block;
+        width: 200px;
+        padding: 10px 0;
+        border: ridge 2px pink;
+        text-align: center;
+        vertical-align: center;
+        font-size: 20px;
+        background-color: #414A52;
+        margin-bottom:20px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 20px;
+        a{
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}
+.footer{
+  background-color: #414A52;
+  height: 260px;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+
+  .banner{
+    padding:30px;
+    display: flex;
+    justify-content:center;
+  }
+}
+
+/* new_registrations */
+.heading{
+  background-color: #414A52;
+  height: 150px;
+  width:100%;
+  // position: fixed;
+  .box{
+    width: 25%;
+    height: 100%;
+    margin: 0 auto;
+    a{
+      text-decoration: none;
+      .title{
+        font-size: 40px;
+        line-height: 60px;
+        color: white;
+        text-align: center;
+        padding-top: 60px;
+      }
+      .detail{
+        font-size: 15px;
+        text-align: 20px;
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+}
+.set-row{
+  width:70%;
+  margin: 0 auto;
+  .container{
+    .container-title{
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+/* new_sessions */
+.header{
+  .heading{
+    background-color: #414A52;
+    height: 150px;
+    width:100%;
+    // position: fixed;
+    .box{
+      width: 25%;
+      height: 100%;
+      margin: 0 auto;
+      a{
+        text-decoration: none;
+        .title{
+          font-size: 40px;
+          line-height: 60px;
+          color: white;
+          text-align: center;
+          padding-top: 60px;
+        }
+        .detail{
+          font-size: 15px;
+          text-align: 20px;
+          color: white;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.session-set-row{
+  width:70%;
+  height: calc(100vh - 150px);
+  margin: 0 auto;
+  .container{
+    .container-title{
+      font-size: 25px;
+      margin-bottom: 15px;
+    }
+  }
+}
+
+/* machines#index */
+.index-headding{
     background-color: #414A52;
     height: 100px;
     width:100%;
     display: flex;
-    justify-content: flex start;
+    justify-content: space-between;
     box-sizing: border-box;
     position: fixed;
     .title{
@@ -14,20 +187,44 @@
       text-align: center;
       padding-left: 50px;
     }
+    .search-form {
+      width: 500px;
+      text-align: center;
+      padding-top: 32px;
+      padding-right: 200px;
+      display:flex;
+      .search-input {
+        width: 100%;
+        height: 20px;
+        margin-right: 10px;
+      }
+      .index-search-btn {
+        background-color: goldenrod;
+        color: gray;
+        width: 90px;
+        height: 42px;
+        line-height: 20px;
+        cursor: pointer;
+      }
+    }
     .emblem{
       height: 70px;
-      width: 300px;    
-      .main-title{
-        width: 100%;
-        font-size: 25px;
-        color: white;
-        text-align: center;    
-      }
-      .stands-for{
-        font-size: 15px;
-        color: white;
-        margin: 0 auto;
-        text-align: center;    
+      width: 300px;
+      margin: auto;
+      a{
+        text-decoration: none;
+        .main-title{
+          width: 100%;
+          font-size: 25px;
+          color: white;
+          text-align: center;    
+        }
+        .stands-for{
+          font-size: 15px;
+          color: white;
+          margin: 0 auto;
+          text-align: center;    
+        }
       }
     }
   }
@@ -56,15 +253,17 @@
       background-color: #414A52;
       margin-top:15px;
       margin-left: 1100px;
-      // margin-right: auto;
       border-radius: 20px;
       a{
         text-decoration: none;
         color: white;
       }
     }
-
   }
+
+
+
+
 
 .show-main{
   .s-heading{
@@ -72,37 +271,50 @@
     height: 100px;
     width:100%;
     top: 0;
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
-    // position: fixed;
-    .title{
-      width: 400px;
-      font-size: 30px;
-      color: goldenrod;
-      line-height: 100px;
-      text-align: center;
-      padding-left: 50px;
+    .s-box{
+      position: fixed;
+      display: flex;
+      justify-content: space-between;
+      box-sizing: border-box;
+      // position: fixed;
+      .title{
+        width: 400px;
+        font-size: 30px;
+        color: goldenrod;
+        line-height: 100px;
+        text-align: center;
+        padding-left: 50px;
+      }
     }
-    
     .s-emblem{
       height: 70px;
       width: 200px;
-      .s-main-title{
-        width: 100%;
-        font-size: 25px;
-        color: white;
-        text-align: center;
-      }
-      .s-stands-for{
-        font-size: 15px;
-        color: white;
-        margin: 0 auto;
-        text-align: center; 
+      text-decoration: none;
+      a{
+        text-decoration: none;
+        .s-main-title{
+          width: 100%;
+          font-size: 25px;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+        }
+        .s-stands-for{
+          font-size: 15px;
+          color: white;
+          margin: 0 auto;
+          text-align: center; 
+          text-decoration: none;
+        }
       }
     }
   }
+
+
+
+
+
+
   .s-main{
     width: 100%;
     height: calc(100vh - 200px);
@@ -218,83 +430,6 @@
     position: fixed;
   }
 }
-.header{
-  width: 100%;
-  height: 190px;
-  top: 0;
-  position: fixed;
-  .heading{
-    background-color: #414A52;
-    height: 150px;
-    width:100%;
-    .box{
-      width: 30%;
-      height: 100%;
-      margin: 0 auto;
-      .title{
-        font-size: 40px;
-        line-height: 60px;
-        color: white;
-        text-align: center;
-        padding-top: 60px;
-      }
-      .detail{
-        font-size: 15px;
-        text-align: 20px;
-        color: white;
-        text-align: center;
-      }
-    }
-  }
-  .username{
-    height: 40px;
-    color: goldenrod;
-    font-size: 25px; 
-    padding-left: 10%;
-    background-color: #414A52;
-    text-shadow: 1px 1px 1px gray;
-    border-bottom:solid 5px;
-  }
-}
-
-.main{
-  width: 100%;
-  height: calc(100vh - 450px);
-  background-color: pink;
-  top: 190px;
-  position: fixed;
-  .main-area{
-    height: 100%;
-    background-image: url(wheel.JPG);
-    background-size: cover;
-    width: 80%;
-    margin: 0 auto;
-    .main-box{
-      // background-color: yellow;
-      padding-top: 50px;
-      margin: auto;
-
-      .cta-btn {
-        // display: inline-block;
-        width: 200px;
-        padding: 10px 0;
-        border: ridge 2px pink;
-        text-align: center;
-        vertical-align: center;
-        font-size: 20px;
-        background-color: #414A52;
-        margin-bottom:20px;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 20px;
-        a{
-          text-decoration: none;
-          color: white;
-        }
-      }
-    }
-  }
-}
 
 .cta-btn:hover {
   box-shadow: 0 0 40px yellow;
@@ -341,32 +476,12 @@
 .set-headding{
   height: 100vh;
   background-color: #414A52;
-  position:fixed
+  top: 0;
 }
 
-.container-title{
-  font-size: 25px;
-  margin-bottom: 15px;
-}
 
-.set-row{
-  width:70%;
-  margin: 0 auto;
-}
 
-.footer{
-  background-color: #414A52;
-  height: 260px;
-  width: 100%;
-  bottom: 0;
-  position: fixed;
 
-  .banner{
-    padding:30px;
-    display: flex;
-    justify-content:center;
-  }
-}
 
 .user-top{
   background-image: url(cat.jpg);

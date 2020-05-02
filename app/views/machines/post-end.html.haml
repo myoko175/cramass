@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %link{:href => "new.scss", :rel => "stylesheet"}/
+    %title Craftsman's Master Stroke
+  %body
+    %header
+      .heading
+        %div 機械登録
+    .contents
+      .contents-row
+        .container
+          = form_with(model: @machine, local: true) do |form|
+            機械カテゴリ：
+            %br/
+            = form.text_area :category, placeholder: "機械カテゴリ" , rows: "2"
+            %br/
+            機械型式：
+            %br/
+            = form.text_area :model, placeholder: "型式" , rows: "2"
+            %br/
+            製造日：
+            %br/
+            = form.text_area :made, placeholder: "機械製造日" , rows: "2"
+            %br/
+            エンジニア：
+            %br/
+            = form.radio_button(:engineer, "あり")
+            = form.label(:engineer, "あり", value: "あり")
+            = form.radio_button(:engineer, "なし")
+            = form.label(:engenner, "なし", value: "なし")
+            %br/
+            = form.text_field :image, placeholder: "写真を貼ってください"
+            %br/
+          %a.cta-btn{:href => "/machines/post-end"} 登録する
