@@ -1,0 +1,53 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %link{:href => "new.scss", :rel => "stylesheet"}/
+    %title Craftsman's Master Stroke
+  %body
+    .show-main
+      .s-heading
+        .s-box
+          %h1.title ▫︎製品詳細▫︎
+        .s-emblem
+          = link_to root_path do
+            .s-main-title
+              CraMasS
+            .s-stands-for
+              Craftsman's Master Stroke
+      .s-main
+        .s-contents
+          .s-info
+            %ul.s-list
+              %li
+                カテゴリー：
+                %br/
+                = @machine.category
+              %li
+                型式：
+                %br/
+                = @machine.model
+              %li
+                メーカー：
+                %br/
+                = @machine.maker
+              %li
+                導入日：
+                %br/
+                = @machine.made
+              %li
+                エンジニア：
+                %br/
+                = @machine.engineer
+              %li
+                所在地：
+                %br/
+                = @machine.address
+            .b-btn
+              %a{:href => "/users/#{@machine.user.id}"}
+                = @machine.user.company
+          .s-image
+            = image_tag(@machine.image.url, :size => "400x400")
+          %div
+          .s-footer

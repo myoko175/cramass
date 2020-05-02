@@ -38,13 +38,13 @@ $white: white;
 }
 
 body,html {
-  height: 130vh;
+  height: 100vh;
   background-color: $lightGray;
 }
 
-body {
-  padding-top: 60px;
-}
+// body {
+//   padding-top: 60px;
+// }
 
 h1,h2,h3,h4,h5,h6,body {
 line-height: 1.57;
@@ -379,11 +379,11 @@ footer {
 }
 
 .search-form {
-  width: 100%;
+  width: 400px;
   text-align: center;
   padding-top: 32px;
   .search-input {
-    width: 60%;
+    width: 100%;
     margin-right: 10px;
   }
 

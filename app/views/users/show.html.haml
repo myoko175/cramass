@@ -1,0 +1,61 @@
+%body
+  .u-main
+    .u-headding
+      %h1.owner ▫︎オーナー情報▫︎
+      .emblem
+        .main-title
+          CraMasS
+        .stands-for
+          Craftsman's Master Stroke
+    .u-contents
+      .u-info
+        .u-left
+          .u-company
+            %div= @company
+          .u-url
+            URL:
+            %span= link_to @url, @url
+        .u-email
+          オファーする：
+          %br/
+          %span= @email
+          %br/
+          .u-btn
+            = link_to 'ホームへ戻る',"/"
+      .u-post
+        - @machines.each do |machine|
+          .machine
+            %table{:border => "5", :cellpadding => "10", :width => "1000"}
+              %tr{:align => "center", :bgcolor => "#0059b3"}
+                %th{:width => "14%"}
+                  %font{:color => "white"} カテゴリ
+                %th{:width => "11%"}
+                  %font{:color => "white"} 型式
+                %th{:width => "10%"}
+                  %font{:color => "white"} メーカー
+                %th{:width => "12%"}
+                  %font{:color => "white"} 導入日
+                %th{:width => "26%"}
+                  %font{:color => "white"} 住所
+                %th{:width => "9%"}
+                  %font{:color => "white"}
+                - if user_signed_in? && current_user.id == machine.user_id
+                  %th{:width => "9%"}
+                    %font{:color => "white"}
+                  %th{:width => "9%"}
+                    %font{:color => "white"}
+              %tr
+                %td= machine.category
+                %td= machine.model
+                %td= machine.maker
+                %td{:align => "center"}
+                  = machine.made
+                %td= machine.address
+                %td{:align => "center"}
+                  %span.btn= link_to '詳細', "/machines/#{machine.id}", method: :get
+                - if user_signed_in? && current_user.id == machine.user_id
+                  %td{:align => "center"}
+                    %span.btn= link_to "編集", "/machines/#{machine.id}/edit", method: :get
+                  %td{:align => "center"}
+                    %span.btn= link_to '削除', "/machines/#{machine.id}", method: :delete
+    .u-footer
