@@ -555,6 +555,11 @@
         border: 1px solid pink;
         border-radius: 6px;
       }
+      .radio-button{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+      }
     }
   }
 }
