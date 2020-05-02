@@ -16,12 +16,12 @@
     .contents-row
       .container
         = form_with(model: @machine, local: true) do |form|
-          機械カテゴリ：　　
+          機械カテゴリ：
           %span 必須
           %br/
           = form.text_area :category, placeholder: "" , rows: "1"
           %br/
-          機械型式：　　
+          機械型式：
           %span 必須
           %br/
           = form.text_area :model, placeholder: "" , rows: "1"
@@ -32,19 +32,29 @@
           %br/
           製造日：
           %br/
-          = form.text_area :made, placeholder: "" , rows: "1"
+          = form.date_select :made,{include_blank: true, start_year: 1970, discard_day: true} 
           %br/
-          所在：　　
+          %br/
+          所在：
           %span 必須
           %br/
           = form.text_area :address, placeholder: "" , rows: "1"
           %br/
           エンジニア：
           %br/
-          = form.radio_button(:engineer, "あり")
-          = form.label(:engineer, "あり", {value: "あり", style: "display: inline-block;"})
-          = form.radio_button(:engineer, "なし")
-          = form.label(:engenner, "なし", {value: "なし",style: "display: inline-block;"})
-          %br/
+          .radio-button
+            .radio-button_button1
+              = form.radio_button(:engineer, "あり")
+              = form.label(:engineer, "あり", {value: "あり", style: "display: inline-block;"})
+            .radio-button_button2
+              = form.radio_button(:engineer, "なし")
+              = form.label(:engenner, "なし", {value: "なし", style: "display: inline-block;"})
+            %br/
+            %br/
+            %br/
+          機械画像：
           = form.file_field :image
           = form.submit "SEND"
+
+
+

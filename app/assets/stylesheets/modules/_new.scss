@@ -545,7 +545,7 @@
 }
 
 .contents{
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   .contents-row{
     .container{
@@ -554,6 +554,11 @@
         color: #414A52;
         border: 1px solid pink;
         border-radius: 6px;
+      }
+      .radio-button{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
       }
     }
   }
