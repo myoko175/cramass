@@ -128,6 +128,7 @@
   }
 }
 
+
 /* new_sessions */
 .header{
   .heading{
@@ -169,6 +170,7 @@
     }
   }
 }
+
 
 /* machines#index */
 .index-headding{
@@ -262,20 +264,73 @@
   }
 
 
+/* machine#new */
+.s-heading{
+  background-color: #414A52;
+  height: 100px;
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  // position: fixed;
+  .title{
+    width: 400px;
+    font-size: 30px;
+    color: goldenrod;
+    line-height: 100px;
+    text-align: center;
+    padding-left: 50px;
+  }
+  .s-emblem{
+    height: 70px;
+    width: 200px;    
+    .s-main-title{
+      width: 100%;
+      font-size: 25px;
+      color: white;
+      text-align: center;    
+    }
+    .s-stands-for{
+      font-size: 15px;
+      color: white;
+      margin: 0 auto;
+      text-align: center;    
+    }
+  }
+}
+.contents{
+  width: 70%;
+  margin: 0 auto;
+  .contents-row{
+    .container{
+      span {
+        background-color: pink;
+        color: #414A52;
+        border: 1px solid pink;
+        border-radius: 6px;
+      }
+      .radio-button{
+        width: 200px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}
 
 
-
+/* machines#show */
 .show-main{
   .s-heading{
     background-color: #414A52;
     height: 100px;
     width:100%;
     top: 0;
+    display: flex;
+    justify-content: space-between;
     .s-box{
-      position: fixed;
-      display: flex;
-      justify-content: space-between;
-      box-sizing: border-box;
+      // background-color: purple;
+      // position: fixed;
       // position: fixed;
       .title{
         width: 400px;
@@ -309,8 +364,6 @@
       }
     }
   }
-
-
 
 
 
@@ -507,59 +560,4 @@
 
 .h1{
   color:goldenrod
-}
-
-.s-heading{
-  background-color: #414A52;
-  height: 100px;
-  width:100%;
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  // position: fixed;
-  .title{
-    width: 400px;
-    font-size: 30px;
-    color: goldenrod;
-    line-height: 100px;
-    text-align: center;
-    padding-left: 50px;
-  }
-  
-  .s-emblem{
-    height: 70px;
-    width: 200px;    
-    .s-main-title{
-      width: 100%;
-      font-size: 25px;
-      color: white;
-      text-align: center;    
-    }
-    .s-stands-for{
-      font-size: 15px;
-      color: white;
-      margin: 0 auto;
-      text-align: center;    
-    }
-  }
-}
-
-.contents{
-  width: 70%;
-  margin: 0 auto;
-  .contents-row{
-    .container{
-      span {
-        background-color: pink;
-        color: #414A52;
-        border: 1px solid pink;
-        border-radius: 6px;
-      }
-      .radio-button{
-        width: 200px;
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-  }
 }
