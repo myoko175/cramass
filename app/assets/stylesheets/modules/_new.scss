@@ -364,10 +364,6 @@
       }
     }
   }
-
-
-
-
   .s-main{
     width: 100%;
     height: calc(100vh - 200px);
@@ -382,11 +378,46 @@
       justify-content: space-around;
       .s-info{
         width: 50%;
-        ul{
+        padding-top: 30px;
+        .info-tag{
+          width: 150px;
+          height: 30px;
+          background-color: #0059b3;
+          border-radius: 7px;
           font-size: 20px;
-          li{
-            padding-top: 20px;
-          }
+          color:white;
+          padding-left: 12px;
+        }
+        .category{
+          font-size: 24px;
+          padding-left:10px; 
+          padding-bottom: 5px;
+
+        }
+        .model{
+          font-size: 24px;
+          padding-left:10px; 
+          padding-bottom: 5px;
+        }
+        .maker{
+          font-size: 24px;
+          padding-left:10px; 
+          padding-bottom: 5px;
+        }
+        .date{
+          font-size: 24px;
+          padding-left:10px; 
+          padding-bottom: 5px;
+        }
+        .engineer{
+          font-size: 24px;
+          padding-left:10px; 
+          padding-bottom: 5px;
+        }
+        .address{
+          font-size: 24px;
+          padding-left:10px; 
+          padding-bottom: 5px;
         }
       }
       .s-image{
@@ -397,8 +428,25 @@
         background-size: cover;
       }
     }
-  }
-  
+    .b-btn {
+      display: inline-block;
+      // width: 250px;
+      padding: 10px 20px;
+      text-align: center;
+      font-size: 28px;
+      background-color: #414A52;
+      // margin: 20px 180px;
+      margin-top: 80px;
+      border-radius: 20px;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
+    .b-btn:hover {
+      box-shadow: 0 0 40px yellow;
+    }
+  } 
   .s-footer{
     background-color: #414A52;
     height: 100px;
@@ -407,6 +455,9 @@
     position: fixed;
   }
 }
+
+
+
 
 .u-main{
   .u-headding{
@@ -504,25 +555,6 @@
 }
 
 .u-btn:hover {
-  box-shadow: 0 0 40px yellow;
-}
-
-.b-btn {
-  display: inline-block;
-  width: 250px;
-  padding: 10px 0;
-  text-align: center;
-  font-size: 20px;
-  background-color: #414A52;
-  margin: 20px 180px;
-  border-radius: 20px;
-  a{
-    text-decoration: none;
-    color: white;
-  }
-}
-
-.b-btn:hover {
   box-shadow: 0 0 40px yellow;
 }
 

@@ -19,31 +19,30 @@
       .s-main
         .s-contents
           .s-info
-            %ul.s-list
-              %li
-                カテゴリー：
-                %br/
-                = @machine.category
-              %li
-                型式：
-                %br/
-                = @machine.model
-              %li
-                メーカー：
-                %br/
-                = @machine.maker
-              %li
-                導入日：
-                %br/
-                = @machine.made
-              %li
-                エンジニア：
-                %br/
-                = @machine.engineer
-              %li
-                所在地：
-                %br/
-                = @machine.address
+            .info-tag
+              カテゴリ：
+            .category
+              = @machine.category
+            .info-tag
+              型式：
+            .model
+              = @machine.model
+            .info-tag
+              メーカー：
+            .maker
+              = @machine.maker
+            .info-tag
+              導入日：
+            .date
+              = @machine.made
+            .info-tag
+              エンジニア：
+            .engineer
+              = @machine.engineer
+            .info-tag
+              所在地：
+            .address
+              = @machine.address
             .b-btn
               %a{:href => "/users/#{@machine.user.id}"}
                 = @machine.user.company
