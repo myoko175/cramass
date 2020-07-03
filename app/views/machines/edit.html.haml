@@ -1,26 +1,43 @@
-.contents.row
-  .container
-    = form_with(model: @machine, local: true) do |form|
-      %h3
-        編集する
-      機械カテゴリ：
-      %br/
-      = form.text_area :category, placeholder: "機械カテゴリ" , rows: "2"
-      %br/
-      機械型式：
-      %br/
-      = form.text_area :model, placeholder: "型式" , rows: "2"
-      %br/
-      製造日：
-      %br/
-      = form.text_area :made, placeholder: "機械製造日" , rows: "2"
-      %br/
-      エンジニア：
-      %br/
-      = form.radio_button(:engineer, "あり")
-      = form.label(:engineer, "あり", value: "あり")
-      = form.radio_button(:engineer, "なし")
-      = form.label(:engenner, "なし", value: "なし")
-      %br/
-      = form.file_field :image
-      = form.submit "SEND"
+.contents
+  .contents-row
+    .container
+      = form_with(model: @machine, local: true) do |form|
+        機械カテゴリ：
+        %span 必須
+        %br/
+        = form.text_area :category, placeholder: "" , rows: "1"
+        %br/
+        機械型式：
+        %span 必須
+        %br/
+        = form.text_area :model, placeholder: "" , rows: "1"
+        %br/
+        メーカー：
+        %br/
+        = form.text_area :maker, placeholder: "" , rows: "1"
+        %br/
+        製造日：
+        %br/
+        = form.date_select :made,{include_blank: true, start_year: 1970, discard_day: true} 
+        %br/
+        %br/
+        所在：
+        %span 必須
+        %br/
+        = form.text_area :address, placeholder: "" , rows: "1"
+        %br/
+        エンジニア：
+        %br/
+        .radio-button
+          .radio-button_button1
+            = form.radio_button(:engineer, "あり")
+            = form.label(:engineer, "あり", {value: "あり", style: "display: inline-block;"})
+          .radio-button_button2
+            = form.radio_button(:engineer, "なし")
+            = form.label(:engenner, "なし", {value: "なし", style: "display: inline-block;"})
+          %br/
+          %br/
+          %br/
+        機械画像：
+        = form.file_field :image
+        = form.submit "SEND"
