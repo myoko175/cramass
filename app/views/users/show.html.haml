@@ -21,12 +21,10 @@
           %br/
           %span= @email
           %br/
-          .u-btn
-            = link_to 'ホームへ戻る',"/"
       .u-post
         - @machines.each do |machine|
           .machine
-            %table{:border => "5", :cellpadding => "10", :width => "1000"}
+            %table{:border => "5", :width => "1000"}
               %tr{:align => "center", :bgcolor => "#0059b3"}
                 %th{:width => "14%"}
                   %font{:color => "white"} カテゴリ
@@ -45,7 +43,7 @@
                     %font{:color => "white"}
                   %th{:width => "9%"}
                     %font{:color => "white"}
-              %tr
+              %tr{:bgcolor => "lemonchiffon"}
                 %td= machine.category
                 %td= machine.model
                 %td= machine.maker
@@ -60,3 +58,5 @@
                   %td{:align => "center"}
                     %span.btn= link_to '削除', "/machines/#{machine.id}", method: :delete
     .u-footer
+      .cta-btn
+        = link_to "トップへ戻る", "/"

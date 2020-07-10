@@ -462,7 +462,7 @@
 
 
 
-.u-main{
+
   .u-headding{
     background-color: #414A52;
     height: 100px;
@@ -498,7 +498,7 @@
   .u-contents{
     height: calc(100vh - 200px);
     width: 90%;
-    background-color: lemonchiffon;
+    // background-color: lemonchiffon;
     margin: 0 auto;
     .u-info{
       height: 100px;
@@ -524,10 +524,16 @@
         }
     }
     .u-post{
+      width: 100%;
       font-size: 16px;
-      padding-left: 20px;
+      margin: 0 auto;
+      overflow: scroll;
+      margin-bottom: 150px;
+      .machine {
+        // background-color: hotpink;
+        width: 100%;
+      }
     }
-    
   }
   .u-footer{
     background-color: #414A52;
@@ -535,8 +541,24 @@
     width: 100%;
     bottom: 0;
     position: fixed;
+    .cta-btn{
+      width: 200px;
+      padding: 10px 0;
+      border: ridge 2px pink;
+      text-align: center;
+      vertical-align: center;
+      font-size: 20px;
+      background-color: #414A52;
+      margin-top:15px;
+      margin-left: 1100px;
+      border-radius: 20px;
+      a{
+        text-decoration: none;
+        color: white;
+      }
+    }
   }
-}
+
 
 .cta-btn:hover {
   box-shadow: 0 0 40px yellow;
